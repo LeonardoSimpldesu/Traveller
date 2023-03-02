@@ -14,20 +14,76 @@
 </head>
 <body>
     <nav>
-        <div class="cabecario">
-            <div class="logo"><i class="fa-sharp fa-solid fa-map fa-2x"></i><h1>Traveller</h1></div>
-            <ul>
-                <li><a href=""><i class="fa-solid fa-house"></i>Home</a></li>
-                <li ><a href=""><i class="fa-solid fa-comment"></i>Blog</a></li>
-                <li ><a href=""><i class="fa-solid fa-suitcase"></i>Reservas</a></li>
-                <li ><a href=""><i class="fa-solid fa-plane"></i>Viagens</a></li>
-                <li ><a href=""><i class="fa-solid fa-bowl-food"></i>Gastronomia</a></li>
-                <li ><a href=""><i class="fa-solid fa-circle-user"></i>Login</a></li>
-            </ul>
+        <ul>
+            <li><a href=""><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href=""><i class="fa-solid fa-comment"></i>Blog</a></li>
+            <li class="logo"><i class="fa-sharp fa-solid fa-map fa-2x"></i><h1>Traveller</h1></li>
+            <li><a href=""><i class="fa-solid fa-suitcase"></i>Reservas</a></li>
+            <li><a href=""><i class="fa-solid fa-plane"></i>Viagens</a></li>
+        </ul>
+</nav>
+    <header>
+        <div class="pesquisa">
+            <h1>SEU MELHOR GUIA DE VIAGEM PARA O MUNDO TODO</h1>
+            <p>BUSQUE AQUI SUA PRÓXIMA VIAGEM</p>
+            <div class="barra-pesquisa">
+                <i class="fa-solid fa-location-dot fa-2x"></i><input type="text" list="local"><button>BUSCAR <i class="fa-solid fa-magnifying-glass"></i></button>
+                
+                <datalist id="local">
+                <option value="Belo Horizonte, MG, Brasil">
+                <option value="São Paulo, SP, Brasil">
+                </datalist>
+            </div>
         </div>
-        <div class="scroll-down">
-            <h1>Scroll Down <i class="arrow right"></i></h1>
+    </header>
+    <section class="destinos">
+        <div class="titulo-destino">
+            <img src="/img/earth-plane.png" alt="">
+            <h2>DESTINOS</h2>
+            <p>Alimente seu lado aventurei com novas viagens</p>
         </div>
-    </nav>
+       <div class="continentes">
+        <div class="card-destino america">
+            <i class="fa-solid fa-earth-americas"></i>
+            <p>AMERICA</p>
+        </div>
+        <div class="card-destino europa">
+            <i class="fa-solid fa-earth-europe"></i>
+            <p>EUROPA</p>
+        </div>
+        <div class="card-destino asia">
+            <i class="fa-solid fa-earth-asia"></i>
+            <p>ÁSIA</p>
+        </div>
+        <div class="card-destino africa">
+            <i class="fa-solid fa-earth-africa"></i>
+            <p>ÁFRICA</p>
+        </div>
+       </div>
+    </section>
+    <section class="destinos-alta">
+        <div class="titulo-destino-alta">
+            <i class="fa-solid fa-fire"></i>
+            <h2>DESTINOS EM ALTA</h2>
+            <p>Veja os destinos do momento!</p>
+        </div>
+        <div class="lugares-alta">
+            <div class="card-alta lugar1">
+                <h3>Arco Do Triunfo</h3>
+            </div>
+            <div class="card-alta lugar2">
+                <h3>Monte Everest</h3>
+            </div>
+            <div class="card-alta lugar3">
+                <h3>Appalachian Trail</h3>
+            </div>
+            <div class="card-alta lugar4">
+                <h3>Lugar Aleatório</h3>
+            </div>
+            <div class="card-alta lugar5">
+                <h3>Lugar Aleatório</h3>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

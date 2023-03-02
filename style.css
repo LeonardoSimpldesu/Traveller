@@ -8,18 +8,23 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style-type: none;
+    border-collapse: collapse;
 }
 
-body{
-    background-color: #fab005;
-    color: #fff;
-    height: 300vh;
-}
+::-webkit-datetime-edit-month-field { background: none; }
+::-webkit-datetime-edit-day-field { background: none; }
+::-webkit-datetime-edit-year-field { background: none; }
+::-webkit-inner-spin-button {display: none;}
+::-webkit-clear-button {display: none; -webkit-appearance: none;}
+
 img{
-    max-width: 100%;
-    height: auto;
+    width: 100%;
 }
 
+::placeholder {
+    font-style: italic;
+    color: #555555;
+}
 /* Classes Globais */
 .arrow{
     border: solid #fff;
@@ -34,64 +39,220 @@ img{
 }
 
 /* Barra de navegação e efeito paralax */
-nav{
-    background-color: #fab005;
-    background-image: url(../img/img4.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.5) url(../img/img13.jpg) fixed no-repeat center;
     background-size: cover;
-    height: 100vh;
+    background-blend-mode: darken;
+
+    height: 80vh;
+    height: 80svh;
+    color: #fff;
 }
 
-nav .cabecario{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 2% 5% 1% 5%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
+nav{
+    color: #fff;
 }
 
 nav i{
     margin-right: 1rem;
 }
 
-nav .logo{
-    display: flex;
-    text-align: center;
-    align-content: center;
-    align-items: center;
-}
-
 nav ul{
     display: flex;
     justify-content: center;
-    text-align: center;
-    align-content: center;
+    gap: 3rem;
+    text-align: right;
     align-items: center;
-    gap: 2rem;
+    width: 100%;
+    padding: 1% 5% 1% 5%;
+    z-index: 1;
+    position: absolute;
 }
 
 nav a{
     color: #fff;
 }
 
-.scroll-down{
-    position: absolute;
-    bottom: 10%;
-    right: 45%;
-    filter: opacity(0.5);
-    cursor: pointer;
+nav .logo{
+    display: flex;
+    font-size: 2rem;
 }
 
-.scroll-down:hover{
-    filter: opacity(1);
+/* Barra de Pesquisa*/
+.pesquisa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-.scroll-down i{
+.barra-pesquisa{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.barra-pesquisa button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #fab005;
+    outline: none;
+    border: none;
+}
+
+.barra-pesquisa input{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 0 0.5rem 3rem;
+    width: 100%;
+}
+
+.fa-location-dot{
+    color: #fab005;
     position: absolute;
-    top: -3rem;
-    left: 3.5rem;
+    left: 2rem;
+}
+
+/* Sessão de Destinos*/
+
+.destinos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 10% 2% 10%;
+    gap: 1rem;
+}
+
+.titulo-destino{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.titulo-destino img{
+    width: 5rem;
+}
+
+.continentes{
+    width: 100%;
+    display: flex;
+
+    gap: 1rem;
+}
+
+.card-destino{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10rem 2rem 10rem 2rem;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.america{
+    background: rgba(0, 0, 0, 0.3) url(../img/america.jpg) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.europa{
+    background: rgba(0, 0, 0, 0.3) url(../img/europa.jpg) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.asia{
+    background: rgba(0, 0, 0, 0.3) url(../img/asia.jpg) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.africa{
+    background: rgba(0, 0, 0, 0.3) url(../img/africa.png) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+
+/* Sessão de Destinos em Alta*/
+.destinos-alta{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 10% 1rem 10%;
+    gap: 1rem;
+}
+
+.titulo-destino-alta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-destino-alta i{
+    font-size: 5rem;
+}
+
+.lugares-alta{
+    display: flex;
+    gap: 1rem;
+}
+
+.card-alta{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 50vh;
+    height: 50svh;
+    color: #fff;
+    padding: 1rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.lugar1{
+    background: rgba(0, 0, 0, 0.3) url(../img/img4.jpg) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.lugar2{
+    background: rgba(0, 0, 0, 0.3) url(../img/img5.jpg) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.lugar3{
+    background: rgba(0, 0, 0, 0.3) url(../img/img6.jpg) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.lugar4{
+    background: rgba(0, 0, 0, 0.3) url(../img/img7.jpg) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.lugar5{
+    background: rgba(0, 0, 0, 0.3) url(../img/img8.jpg) no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
 }
