@@ -21,6 +21,10 @@ img{
     width: 100%;
 }
 
+div{
+    width: 100%;
+}
+
 ::placeholder {
     font-style: italic;
     color: #555555;
@@ -96,7 +100,7 @@ nav .logo{
     justify-content: center;
     background-color: #fff;
     padding: 1rem;
-    width: 100%;
+    width: 50%;
     text-align: center;
     align-items: center;
 }
@@ -168,25 +172,25 @@ nav .logo{
 }
 
 .america{
-    background: rgba(0, 0, 0, 0.3) url(../img/america.jpg) no-repeat center;
+    background: rgba(0, 0, 0, 0.7) url(../img/america.jpg) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
 }
 
 .europa{
-    background: rgba(0, 0, 0, 0.3) url(../img/europa.jpg) no-repeat center;
+    background: rgba(0, 0, 0, 0.7) url(../img/europa.jpg) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
 }
 
 .asia{
-    background: rgba(0, 0, 0, 0.3) url(../img/asia.jpg) no-repeat center;
+    background: rgba(0, 0, 0, 0.7) url(../img/asia.jpg) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
 }
 
 .africa{
-    background: rgba(0, 0, 0, 0.3) url(../img/africa.png) no-repeat center;
+    background: rgba(0, 0, 0, 0.7) url(../img/africa.png) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
 }
@@ -217,14 +221,80 @@ nav .logo{
 }
 
 .card-alta{
-    display: flex;
-    align-items: flex-end;
     width: 100%;
     height: 50vh;
     height: 50svh;
     color: #fff;
-    padding: 1rem;
+    padding: 13rem 0 0;
     text-shadow: 2px 2px 4px #000;
+    border-radius: 2%;
+    overflow: hidden;
+
+    transition: transform 500ms ease;
+}
+
+.card-alta:hover{
+    transform: scale(1.05);
+}
+
+.card-content{
+    --padding: 1.5rem;
+    padding: var(--padding);
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 10%,
+        hsl(0 0% 0% / 1)
+    );
+    transform: translateY(75%);
+    transition: transform 500ms ease;
+}
+
+.card-alta:hover .card-content{
+    transform: translateY(0);
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after{
+    content: "";
+    height: 5px;
+    position: absolute;
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    width: calc(100% + var(--padding));
+    background: #fab005;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.card-alta:hover .card-title::after{
+    transform: scaleX(1);
+}
+
+.card-alta:hover .card-body{
+    opacity: 1;
+}
+
+.card-body{
+    padding: 0.5rem 0;
+    opacity: 0;
+}
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    background-color: #fab005;
+    padding: 0.5em 1em;
+    border-radius: 5%;
 }
 
 .lugar1{
@@ -255,4 +325,68 @@ nav .logo{
     background: rgba(0, 0, 0, 0.3) url(../img/img8.jpg) no-repeat center;
     background-size: cover;
     background-blend-mode: darken;
+}
+
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #fab005;
+    height: 35vh;
+    height: 35svh;
+    padding: 1rem 10% 1rem 10%;
+    color: #fff;
+}
+
+.conteudos{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 2rem;
+}
+
+.redes i{
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 1rem;
+}
+
+.mais-conteudo{
+    display: flex;
+    gap: 2rem;
+}
+
+.mais-conteudo li{
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
+.rodape{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2rem;
+    border-top: 1px solid #fff;
+    margin-top: 1rem;
 }
